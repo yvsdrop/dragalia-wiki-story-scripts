@@ -1,3 +1,8 @@
+"""
+Contains utility functions to convert the Dragalia Wiki team's extracted
+Story MonoBehaviour txt scripts into Python dictionaries or JSON strings.
+"""
+
 import json
 import re
 

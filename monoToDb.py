@@ -1,3 +1,8 @@
+"""
+Converts the Dragalia Wiki team's parsed Mono outputs (txt csv files) into
+a sqlite3 dB for querying.
+"""
+
 import csv
 import glob
 import sqlite3

@@ -1,3 +1,8 @@
+"""
+Converts the Dragalia Wiki team's extracted Story MonoBehaviour txt scripts
+into partial or full wikitext templating.
+"""
+
 import glob
 import re
 import sqlite3
