@@ -24,10 +24,11 @@ cur = con.cursor()
 for f in glob.glob(f'{INPUT_PATH}/*.txt'):
   with open(f, encoding='utf-8', newline='') as file:
     table_name = path.splitext(path.basename(f))[0]
+    dialect = 'excel'
     if table_name == 'TextLabel':
-      continue
+      dialect = 'excel-tab'
 
-    reader = csv.reader(file)
+    reader = csv.reader(file, dialect=dialect)
     columns = next(reader)
     rows = [tuple(row) for row in reader]
     placeholder = ','.join(["?" for i in columns])
